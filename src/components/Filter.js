@@ -1,11 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-// import contactsActions from "../redux/contacts/contacts-actions";
 import {changeFilter} from '../redux/contacts/contacts-actions'
 import contactsSelectors from '../redux/contacts/contacts-selectors'
 
 const Filter = ({ value, onChange }) => (
-  <div className="filter">
+   <div className="filter">
     <label className="label">
       Find contacts by name:
       <input
@@ -13,7 +12,8 @@ const Filter = ({ value, onChange }) => (
         type="text"
         value={value}
         onChange={onChange}
-      ></input>
+      >
+      </input>
     </label>
   </div>
 );

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ContactForm from '../components/Contact-form';
-import Filter from '../components/Contacts';
+import Filter from '../components/Filter';
 import ContactsList from '../components/Contacts';
 // import Container from '../components/Container';
 // import TodoList from '../components/TodoList';
@@ -24,9 +24,9 @@ class ContactsView extends Component {
     showModal: true,
   };
 
-  componentDidMount() {
-    this.props.fetchTodos();
-  }
+  // componentDidMount() {
+  //   this.props.fetchTodos();
+  // }
 
   // toggleModal = () => {
   //   this.setState(({ showModal }) => ({
@@ -39,24 +39,25 @@ class ContactsView extends Component {
 
     return (
       <>
-        <div style={barStyles}>
+        {/* <div style={barStyles}> */}
           {/* <Filter />
           <Stats /> */}
           {/* <IconButton onClick={this.toggleModal} aria-label="Добавить todo">
             <AddIcon width="40" height="40" fill="#fff" />
           </IconButton> */}
 
-          {this.props.isLoadingTodos && <h1>Загружаем...</h1>}
-        </div>
+          {/* {this.props.isLoadingTodos && <h1>Загружаем...</h1>}
+        </div> */}
 
         {/* <TodoList /> */}
 
         <h1>Phonebook</h1>
         <ContactForm />
 
-        <h2>Contacts</h2>
+        <h2>Filter</h2>
         <Filter />
 
+        <h2>Contacts</h2>
         <ContactsList />
 
         {/* {showModal && (
