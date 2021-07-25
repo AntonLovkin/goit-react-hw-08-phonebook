@@ -8,7 +8,7 @@ import authSelectors from '../redux/auth/auth-selectors';
 const styles = {
   header: {
     display: 'flex',
-    // justifyContent: 'space-between',
+    justifyContent: 'space-between',
     alignItems: 'center',
     borderBottom: '1px solid #2A363B',
   },
@@ -17,10 +17,15 @@ const styles = {
 const AppBar = ({ isAuthenticated }) => (
   <header style={styles.header}>
     
-    {isAuthenticated ? <UserMenu /> : <AuthNav />}
-    
-    <Navigation />
-    
+    {isAuthenticated
+      ?
+      <>
+        <Navigation />
+        <UserMenu />
+        
+      </>
+      : <AuthNav />}
+        
   </header>
 );
 
